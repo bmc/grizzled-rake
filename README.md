@@ -28,7 +28,7 @@ that capability.
 ## Copyright and License
 
 This code is copyright &copy; 2011 Brian M. Clapper and is released under a
-[BSD License](LICENSE.md).
+BSD License.
 
 [Rake]: http://rake.rubyforge.org/
 [metaprograms]: http://practicalruby.blogspot.com/2007/02/ruby-metaprogramming-introduction.html
