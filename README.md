@@ -21,6 +21,10 @@ contain optional timestamps.
     # no timestamps are used (i.e., Rake messages look "normal").
     GrizzledRake::TimeFormat::timestamp_format = '[%H:%M:%S.$m]'
 
+Note that I extended the *strftime* escapes to support a `$m` escape, allowing
+the insertion of milliseconds into the output. *strftime* does not support
+that capability.
+
 ## Copyright and License
 
 This code is copyright &copy; 2011 Brian M. Clapper and is released under a
