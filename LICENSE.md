@@ -1,8 +1,3 @@
----
-title: License for Grizzled Rake
-layout: default
----
-
 Grizzled Rake is released under a **BSD license**, adapted from
 <http://opensource.org/licenses/bsd-license.php>
 
