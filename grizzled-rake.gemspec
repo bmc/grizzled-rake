@@ -1,4 +1,5 @@
 #                                                                -*- ruby -*-
+
 Gem::Specification.new do |spec|
 
   require 'rake'
@@ -9,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.version          = '0.1.0'
   spec.date             = '2011-03-08'
 
-  spec.summary          = 'Some additional stuff for Rake'
-  spec.description      = spec.summary
+  spec.summary          = 'Local Rake customizations'
+  spec.description      = 'grizzled-rake provides local Rake customizations'
 
   spec.authors          = ['Brian M. Clapper']
   spec.email            = 'bmc@clapper.org'

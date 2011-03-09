@@ -1,23 +1,29 @@
 require 'rake'
 
-module TimeFormat
-  # Set the strftime format for output message. Use '$m' in the format,
-  # if you want milliseconds.
-  def timestamp_format=(format)
-    @timestamp_format = format
-  end
+# GrizzledRake
+module GrizzledRake
+  module TimeFormat
+    # Set the strftime format for output message. Use '$m' in the format,
+    # if you want milliseconds.
+    @@timestamp_format = '%H:%M:%S'
+    def timestamp_format=(format)
+      @@timestamp_format = format
+    end
 
-  def s_now
-    now = Time.now
-    ms = (now.usec / 1000).to_s
-    now.strftime(@timestamp_format).sub('$m', ms)
+    def s_now
+      now = Time.now
+      ms = (now.usec / 1000).to_s
+      fmt = @@timestamp_format
+      now.strftime(fmt).sub('$m', ms)
+    end
   end
 end
-include TimeFormat
+
+include GrizzledRake::TimeFormat
 
 # Force output from FileUtils to have a timestamp prefix.
 module FileUtils
-  include TimeFormat
+  include GrizzledRake::TimeFormat
 
   alias :real_fu_output_message :fu_output_message
   def fu_output_message(msg)
