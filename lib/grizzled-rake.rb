@@ -41,3 +41,10 @@ alias :real_rake_output_message :rake_output_message
 def rake_output_message(message)
   real_rake_output_message s_now + message
 end
+
+# Emit verbose message.
+def vmessage(message)
+  if RakeFileUtils.verbose_flag == true
+    rake_output_message message
+  end
+end
