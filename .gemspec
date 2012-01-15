@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.rubygems_version = '1.3.5'
 
   spec.name             = 'grizzled-rake'
-  spec.version          = '0.1.1'
-  spec.date             = '2011-04-26'
+  spec.version          = '0.1.2'
+  spec.date             = '2012-01-14'
 
   spec.summary          = 'Local Rake customizations'
   spec.description      = 'grizzled-rake provides local Rake customizations'

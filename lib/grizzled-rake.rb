@@ -42,8 +42,15 @@ def rake_output_message(message)
   real_rake_output_message s_now + message
 end
 
+# A puts() that uses Rake's output function (and, thus, honors any
+# timestamp you might have set.)
+def rk_puts(message)
+  rake_output_message message
+end
+
 # Emit verbose message.
-def vmessage(message)
+alias :vmessage :rk_vputs
+def rk_vputs(message)
   if RakeFileUtils.verbose_flag == true
     rake_output_message message
   end
