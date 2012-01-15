@@ -49,9 +49,9 @@ def rk_puts(message)
 end
 
 # Emit verbose message.
-alias :vmessage :rk_vputs          # old name
 def rk_vputs(message)
   if RakeFileUtils.verbose_flag == true
     rake_output_message message
   end
 end
+alias :vmessage :rk_vputs          # old name
