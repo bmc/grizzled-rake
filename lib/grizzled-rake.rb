@@ -1,4 +1,3 @@
-require 'rake'
 
 # GrizzledRake
 module GrizzledRake
